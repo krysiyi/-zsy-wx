@@ -1,0 +1,151 @@
+<!--pages/mall/mall.wxml-->
+<view class="page__bd">
+    <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon 
+                    class="weui-icon-search_in-box" 
+                    type="search" size="14">
+                    </icon>
+                    <input 
+                    type="text" 
+                    class="weui-search-bar__input" 
+                    placeholder="搜索" 
+                    value="{{inputVal}}" 
+                    focus="{{inputShowed}}"
+                    bindinput="inputTyping" />
+                    <view 
+                    class="weui-icon-clear" 
+                    wx:if="{{inputVal.length > 0}}" 
+                    bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label 
+                class="weui-search-bar__label" 
+                hidden="{{inputShowed}}" 
+                bindtap="showInput">
+                    <icon 
+                    class="weui-icon-search" 
+                    type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view 
+            class="weui-search-bar__cancel-btn" 
+            hidden="{{!inputShowed}}"
+            wx:if="{{inputVal.length <= 0}}"  
+            bindtap="hideInput">取消</view>
+            <view 
+            class="weui-search-bar__cancel-btn" 
+            hidden="{{!inputShowed}}"
+            wx:if="{{inputVal.length > 0}}"  
+            bindtap="searchValue">搜索</view>
+        </view>
+</view>
+<view class='search' wx:if="{{inputShowed}}">
+  <view class='hot'>
+    <text>热门搜索</text>
+    <view class='list'>
+      <view 
+      wx:for='{{hotlist}}' 
+      wx:key="{{index}}" 
+      catchtap='goDetail'
+      data-link='{{item.link}}'
+      >{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class='history'>
+    <text>历史搜索</text>
+    <view>
+      <view wx:for="{{history}}" wx:key="{{index}}">
+      {{item}}<icon type='clear' size='20' catchtap='deleteSearch' data-index="{{index}}"></icon>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class='home' wx:if="{{!inputShowed}}">
+<swiper indicator-dots="true"
+  autoplay="true" interval="4000" duration="1000">
+  <block wx:for="{{swiper}}" wx:key="{{item.id}}">
+    <swiper-item>
+      <image src="{{item.img}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='nav-wrapper'>
+  <view 
+    class='nav-item' 
+    wx:for="{{nav}}" 
+    wx:key="{{item.id}}"
+    data-key="{{item.name}}"
+    bindtap='gotolist'
+  >
+    <image src='{{item.img}}'></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+
+<view class='new-product'>
+  <view class='title-wrapper'>
+    <view class='title'>
+      <text class='pink'>新品首发</text>
+      <text class='normal'>最新专辑、周边上架</text>      
+    </view>
+    <view class='more'>
+    MORE >
+    </view>
+  </view>
+  <view class='new-product-list'>
+    <view 
+      class='new-product-item' 
+      wx:for="{{newProduct}}" 
+      wx:key="{{item[0].id}}"
+      data-id="{{item[0].id}}"
+      bindtap='gotoDetail'
+    >
+      <view class='img'>
+      <image src='{{item[0].headImg}}'></image>
+      </view>
+      <view class='title'>
+        {{item[0].title}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='popular-artist'>
+  <view class='title-wrapper'>
+    <view class='title'>
+      <text class='pink'>热门艺人</text>   
+    </view>
+    <view class='more'>
+    MORE >
+    </view>
+  </view>
+  <view class='name'>
+    <view class='name-item' wx:for="{{namelist}}" wx:key="{{item.id}}">    
+      <view class='img' catchtap='changeIndex' data-index="{{index}}">
+        <image src='{{item.img}}'class="{{index===currentIndex?'ac':''}}"></image>
+        <view class="mohu" wx:if="{{currentIndex!==index}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class='text'>{{namelist[currentIndex].name}}</view>
+  
+  <view class='popular-artist-list'>
+    <view class='product-item' wx:for="{{namepro}}" wx:key="{item.id}}">
+      <view class='img'>
+      <image src='{{item.headImg}}'></image>
+      </view>
+      <view class='title'>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/mine/mine.wxml-->
+<view class='page'>
+  <view class='info'>
+    <view class='up' catchtap='gotoLogin'>
+      <image src='{{avatarUrl}}'></image>
+      <text>{{isLogin?nickName:'登录/注册'}}</text>
+      <text class='right'>></text>
+    </view>
+    <view class='down'>
+      <view catchtap='gotoCart'>
+        <image src='https://m.owhat.cn/src/images/icon_mine_shoppingcart@2x.png'></image>
+        <text>购物车</text>
+      </view>
+      <view>
+        <image src='https://m.owhat.cn/src/images/icon_mine_order@2x.png'></image>
+        <text>订单中心</text>
+      </view>
+      <view>
+        <image src='https://m.owhat.cn/src/images/icon_mine_Oyuan@2x.png'></image>
+        <text>O!元</text>
+      </view>            
+    </view>
+  </view>
+
+  <view class='mylist'>
+    <view class='list-item' wx:for="{{mylist}}" wx:key="{{index}}">
+      <text>{{item}}</text>
+      <text class='right'>></text>
+    </view>
+  </view>
+</view>

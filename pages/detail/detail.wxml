@@ -1,0 +1,43 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail'>
+<swiper indicator-dots="true">
+  <block wx:for="{{goodsDetail.descImages}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.thumbUrl}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='info'>
+  <view class='title'>{{goodsDetail.title}}</view>
+  <view class='price'>￥{{goodsDetail.price}}</view>
+  <view class='sureicon'></view>
+</view>
+</view>
+
+<view class='desc'>
+  <view class='kind'>
+  <text>款式选择</text>
+  <text class='btn'>···</text>
+  </view>
+  <view class='about'>
+    <view class='tabhead'>
+      <view class='prodesc' bindtap='changeTab'><text class='{{tabFlag?"":"ac"}}'>商品详情</text></view>
+      <view class='question' bindtap='changeTab'><text class='{{!tabFlag?"":"ac"}}'>问答</text></view>
+    </view>
+    <view wx:if="{{!tabFlag}}" class='desc-text'>
+    商品描述
+    
+    </view>
+    <view wx:if="{{tabFlag}}" class='ques-text'>
+     问答
+    </view>
+  </view>
+</view>
+<view class='footer'>
+<view class='cart' bindtap='gotoCart'>
+<image src='../../assets/img/cart-selected.png'></image>
+{{count}}
+</view>
+<view class='buy'>立即购买</view>
+<view class='toCart' bindtap='addcart'>加入购物车</view>
+</view>

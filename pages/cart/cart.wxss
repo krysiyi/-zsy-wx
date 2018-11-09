@@ -1,0 +1,141 @@
+/* pages/cart/cart.wxss */
+page{
+  background-color: #efeff4;
+  height: 100%;
+}
+.cart{
+  height: 100%;
+}
+.empty{
+  padding-top: 60rpx;
+  height: 500rpx;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.empty image{
+  width: 280rpx;
+  height: 280rpx;
+}
+.empty view{
+  color: #666;
+}
+.empty view.gotomall{
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 88rpx;
+  width: 255rpx;
+  height: 88rpx;
+  color: white;
+  background-color: #ff4683;
+}
+.footer{
+  align-items: center;
+  display: flex;
+  height: 100rpx;
+  background-color: white;
+}
+.cartwrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer view{
+  flex: 1;
+  height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.footer .todo{
+  line-height: 100rpx;
+  color: white;
+  background-color: #ff4683;
+}
+.footer .weui-check__hd_in-checkbox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer .delete{
+  line-height: 100rpx;
+}
+.footer .amount{
+  padding-right: 15rpx;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 34rpx;
+}
+.footer .amount text{
+  text-align: right;
+}
+.footer .amount text text{
+  color: #ff4683;
+  font-weight: bold;
+}
+.footer .amount text.freight{
+  font-size: 30rpx;
+  color: #999999;
+}
+.header{
+  height: 64rpx;
+  background-color: white;
+}
+.header text{
+  padding: 0 15rpx;
+  border-radius: 5rpx;
+  border: 1px solid  #efeff4;
+  color: #999999;
+  margin-left: 30rpx;
+  font-size: 36rpx;
+  display: inline-block;
+  height: 100%
+}
+.cart-list{
+  flex: 1;
+  padding: 15rpx;
+}
+.cart-item{
+  align-items: center;
+  display: flex;
+  margin-top: 15rpx;
+  background-color: white;
+  height: 200rpx;
+}
+.cart-item .img image{
+  width: 164rpx;
+  height: 164rpx;
+}
+.cart-item .desc{
+  width: 420rpx;
+  padding-left: 30rpx;
+}
+.cart-item .desc .title{
+  height: 108rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cart-item .desc .title .cacl{
+  display: flex;
+  justify-content: center;
+  width: 209rpx;
+  height: 68rpx;
+  background: url('https://s.yytcdn.com/v2/images/h5/count.png') no-repeat;
+  background-size: 100% auto;
+}
+.cart-item .desc .title .cacl view{
+  flex: 1;
+  text-align: center;
+  line-height: 68rpx;
+}
+.cart-item .desc .price{
+  text-align: right;
+  color: #ff4683;
+}
+.cart-item .desc .price text{
+  font-size: 28rpx;
+  color: #666666;
+  margin-left: 15rpx;
+}

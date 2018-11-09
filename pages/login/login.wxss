@@ -1,0 +1,112 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+}
+.loginbox{
+  width: 554rpx;
+  height: 540rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.loginbox .header{
+  height: 70rpx;
+  background: url('https://m.owhat.cn/src/images/owhat_logo.png') no-repeat;
+  background-size: auto 100%;
+  background-position-x: 50%;
+}
+.loginbox .inputbox{
+  height: 380rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.loginbox .inputbox view{
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #f1f1f2;
+  display: flex;
+  align-items: center;
+}
+.loginbox .inputbox view image{
+  margin-left: -10rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.loginbox .inputbox view input{
+  padding: 0 15rpx;
+  font-size: 28rpx;
+}
+.loginbox .inputbox view.login{
+  display: flex;
+  justify-content: center;
+  background-color: #dde1f1;
+  color: white;
+}
+.other{
+  width: 460rpx;
+  margin: 30rpx auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.other .register{
+  color: #FF4773;
+}
+.other .forget{
+  color:  #8E8E93;
+}
+.footer{
+  margin-top: 200rpx;
+}
+.footer .line {
+  position: relative;
+  height: 1rpx;
+  margin-top: 0.15rem;
+  background: -webkit-linear-gradient(left, rgba(208, 208, 208, 0), #d0d0d0, rgba(208, 208, 208, 0));
+  background-image: -webkit-linear-gradient(left, rgba(208, 208, 208, 0), rgb(208, 208, 208), rgba(208, 208, 208, 0));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+.footer .otherlogin{
+  background-color: white;
+  padding: 0 30rpx;
+  position: absolute;
+  top:-20rpx;
+  left:240rpx;
+  color: #aaa;
+  font-size: 30rpx; 
+}
+.footer .way{
+  margin-top: 60rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .way view{
+  width: 80rpx;
+  height: 80rpx;
+}
+.footer .way view.wechat{
+  background: url(https://m.owhat.cn/src/images/login_wechat.png);
+  background-size: 100% auto;
+}
+.footer .way view.wechat button{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.footer .way view.weibo{
+  background: url(https://m.owhat.cn/src/images/login_weibo.png);
+  background-size: 100% auto;
+}
+.footer .way view.qq{
+  background: url(https://m.owhat.cn/src/images/login_qq.png);
+  background-size: 100% auto;
+}

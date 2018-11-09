@@ -1,0 +1,62 @@
+/* pages/mine/mine.wxss */
+.page{
+  background-color: #efeff4;
+}
+.page .info{
+background-color: white;
+width: 690rpx;
+padding:0 30rpx;
+}
+.page .info .up{
+  width: 100%;
+  height: 128rpx;
+  padding-bottom: 50rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #CDCED3 solid;
+  position: relative;
+}
+.page .info .up image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.page .info .up .right{
+  position: absolute;
+  right: 5px;
+  color: #CDCED3;
+}
+.page .info .down{
+  padding: 50rpx 0;
+  display: flex;
+  justify-content: space-around;
+}
+.page .info .down view{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+.page .info .down view image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.page .mylist{
+  margin-top: 15px;
+  background-color: white;
+  width: 690rpx; 
+  padding: 0 30rpx;
+}
+.page .mylist .list-item{
+  width: 100%;
+  height: 116rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #CDCED3 solid;
+}
+.page .mylist .list-item .right{
+  margin-right: 5px;
+  color: #CDCED3;
+}

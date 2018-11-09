@@ -1,0 +1,16 @@
+/* pages/location/location.wxss */
+.map{
+  width: 100%;
+}
+button{
+  margin-top: 30rpx;
+}
+input{
+  height: 90rpx;
+  margin-top: 30rpx;
+  border: 2rpx solid gainsboro;
+}
+icon{
+  margin-right: 15rpx;
+  float: right;
+}

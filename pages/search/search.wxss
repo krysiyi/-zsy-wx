@@ -1,0 +1,7 @@
+/* pages/search/search.wxss */
+.page .page__bd .weui-search-bar{
+  background-color: white;
+}
+.page .page__bd .weui-search-bar .weui-search-bar__form{
+  background-color: #efeff4;
+}

@@ -1,0 +1,40 @@
+<!--pages/list/list.wxml-->
+<scroll-view 
+  class='list-wrapper' 
+  scroll-y="true"
+  bindscrolltolower="loadmore"
+>
+<view class='header'>
+<text>相关商品</text>
+<view class='rand' catchtap='changeRand'>{{randText}}
+  <view wx:if="{{isRand}}" catchtap='changeText'>
+    <text data-text="最新发布">最新发布</text>
+    <text data-text="销量">销量</text>
+    <text data-text="价格从低到高">价格从低到高</text>
+    <text data-text="价格从高到低">价格从高到低</text>
+  </view>
+</view>
+</view>
+
+<view class='list'>
+  <view 
+    class='list-item' 
+    wx:for="{{list}}" 
+    wx:key="{{item.id}}"
+    data-id="{{item.id}}"
+    bindtap='gotoDetail'
+  >
+    <view class='img'>
+      <image src='{{item.headImg}}'></image>
+    </view>
+    <view class='desc'>
+      <view class='title'>{{item.title}}</view>
+      <view class='price'>
+        <text class='nowPrice'>￥{{item.price}}</text>
+        <text class='oriPrice'>￥{{item.originalPrice}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{lastPage}}">已经到最后一页啦……</view>
+</scroll-view>

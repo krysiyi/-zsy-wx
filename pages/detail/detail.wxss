@@ -1,0 +1,105 @@
+/* pages/detail/detail.wxss */
+page{
+  background-color: #efeff4;
+}
+.footer{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background-color: white;
+}
+.footer>view{
+  line-height: 100rpx;
+  text-align: center;
+  flex: 1;
+}
+.footer .cart image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.footer .buy{
+  border: 1rpx solid #ff4683;
+  color: #ff4683;
+}
+.footer .toCart{
+  background-color: #ff4683;
+  color: white;
+}
+swiper{
+  width: 750rpx;
+  height: 750rpx;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.info{
+  margin-top: 1rpx;
+  background-color: white;
+  padding: 0 30rpx;
+  padding-top: 15rpx;
+}
+.info .title{
+  color: #666666;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.info .price{
+  color: #ff4683;
+  font-size: 46rpx;
+  border-bottom: 1px dashed #d5d5d5;
+  padding-bottom: 30rpx;
+}
+.info .sureicon{
+  margin: 15rpx auto;
+  width: 573rpx;
+  height:109rpx;
+  background: url('https://s.yytcdn.com/v2/images/h5/goodssureicon_03.png') no-repeat;
+  background-size: 100% auto;
+}
+.desc{
+  background-color: white;
+  padding: 0 30rpx;
+}
+.desc .kind{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.desc .kind text{
+  font-size: 32rpx;
+  color: #333333;
+}
+.desc .kind .btn{
+  font-size: 60rpx;
+}
+.desc .about .tabhead{
+  margin: 0 auto;
+  width: 690rpx;
+  height: 84rpx;
+  display: flex;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.desc .about .tabhead view{
+  text-align: center;
+  flex: 1
+}
+.desc .about .tabhead view text{
+  display: inline-block;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-top: 3px solid transparent;
+}
+.desc .about .tabhead view text.ac{
+    color: #ff4683;
+    border-top: 3px solid #ff4683;
+}
+.desc .about .desc-text,.desc .about .ques-text{
+  height: 500rpx;
+}

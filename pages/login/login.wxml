@@ -1,0 +1,31 @@
+<!--pages/login/login.wxml-->
+<view class='loginbox'>
+  <view class='header'></view>
+  <view class='inputbox'>
+    <view class='username'>
+      <image src='https://m.owhat.cn/src/images/login_name.png'></image>
+      <input type='text' id='username' placeholder='请输入用户名'  bindblur='inputname'></input>
+    </view>
+    <view class='password'>
+      <image src='https://m.owhat.cn/src/images/login_password.png'></image>
+      <input type='password' id='password' placeholder='请输入密码' bindblur='inputword'></input>
+    </view>
+    <view class='login' catchtap='login'>登录</view>
+  </view>
+</view>
+<view class='other'>
+    <text class='register'>立即注册</text>
+    <text class='forget'>忘记密码</text>
+</view>
+<view class='footer'>
+  <view class='line'>
+  <view class='otherlogin'>第三方账号登录</view>
+  </view>
+  <view class='way'>
+    <view class='wechat' catchtap='loginWechat'>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"/>
+    </view>
+    <view class='weibo'></view>
+    <view class='qq'></view>        
+  </view>
+</view>

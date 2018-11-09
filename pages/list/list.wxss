@@ -1,0 +1,74 @@
+/* pages/list/list.wxss */
+page{
+  height: 100%;
+}
+.list-wrapper{
+  width: 690rpx;
+  padding: 0 30rpx;
+  height: 100%;
+}
+.header{
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+}
+.header text{
+   color:#9d9ea5;
+}
+.header .rand{
+  position: relative;
+  margin-right: 30rpx;
+}
+.header .rand view{
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  width: 200rpx;
+  background-color: white;
+  position: absolute;
+  top: 60rpx;
+  right: 0;
+}
+.header .rand::after{
+  content: "";
+  position: absolute;
+  right: -30rpx;
+  top:15rpx;
+  border: 12rpx solid transparent; 
+  border-top: 15rpx solid #ff4683;
+}
+.list-item{
+  margin-top: 30rpx;
+  display: flex;
+  border-bottom: 1px dotted #ced0dd;
+}
+.list-item .img image{
+  width: 236rpx;
+  height: 236rpx;
+  border-radius: 30rpx;
+}
+.list-item .desc{
+  margin-left: 30rpx;
+  padding-top: 30rpx;
+}
+.list-item .desc .title{
+  font-size: 30rpx;
+  height: 100rpx;
+  color: #5c5c5c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.list-item .desc .price{
+  margin-top: 50rpx;
+  font-weight: bold;
+}
+.list-item .desc .price .nowPrice{
+  color: #ff4683;
+  margin-right: 15rpx;
+}
+.list-item .desc .price .oriPrice{
+  font-size: 30rpx;
+  color: #ced0dd;
+  text-decoration: line-through;
+}

@@ -1,0 +1,65 @@
+<!--pages/logout/logout.wxml-->
+<view class='mylist info'>
+    <view class='list-item' catchtap='updateAvatar'>
+      <text>修改头像</text>
+      <view>
+        <image src='{{avatarUrl}}'></image>
+        <text class='right'>></text>
+      </view>
+    </view>
+    <view class='list-item'>
+      <text>用户ID</text>
+      <view>
+        <text>{{userId}}</text>
+        <text class='right'></text>
+      </view>
+    </view>
+    <view class='list-item'>
+      <text>昵称</text>
+      <view>
+        <text>{{nickName}}</text>
+        <text class='right'>></text>
+      </view>
+    </view>
+    <view class='list-item'>
+      <text>性别</text>
+      <view>
+        <text>{{gender===1?'男':'女'}}</text>
+        <text class='right'>></text>
+      </view>
+    </view>
+    <view class='list-item'>
+      <text>生日</text>
+      <view>
+        <text></text>
+        <text class='right'>></text>
+      </view>
+    </view>
+    <view class='list-item'>
+      <text>签名</text>
+      <view>
+        <text></text>
+        <text class='right'>></text>
+      </view>
+    </view>
+</view>
+<view class='mylist map'>
+    <view class='list-item' catchtap='gotoLocation'>
+      <text>管理收货地址</text>
+      <view>
+        <text class='right'>></text>
+      </view>
+    </view>
+    <view class='list-item'>
+      <text>认证粉丝会、粉丝机构、自媒体</text>
+      <view>
+        <text></text>
+        <text class='right'>></text>
+      </view>
+    </view>
+</view>
+<view class='mylist logout' catchtap='logout'>
+    <view class='list-item'>
+      退出当前账号
+    </view>
+</view>

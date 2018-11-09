@@ -1,0 +1,48 @@
+/* pages/logout/logout.wxss */
+page{
+  background-color: #f8f8f8;
+}
+.mylist{
+  margin-top: 15rpx;
+  background-color: white;
+  width: 690rpx; 
+  padding: 0 30rpx;
+  font-size: 34rpx;
+}
+page .logout .list-item{
+  justify-content: center;
+  color: #FF4773;
+}
+.mylist .list-item{
+  width: 100%;
+  height: 116rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #CDCED3 solid;
+}
+.mylist .list-item text{
+  color: #2d2d31;
+}
+.mylist.info .list-item:first-child{
+  height: 180rpx;
+} 
+.mylist .list-item:last-child{
+  border-bottom: none;
+} 
+.mylist.info .list-item:first-child view{
+  display: flex;
+  align-items: center;
+}
+.mylist .list-item view image{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+}
+.mylist .list-item view text{
+  color: #8E8E93;
+}
+.mylist .list-item .right{
+  margin: 0 15rpx;
+  color: #CDCED3;
+}

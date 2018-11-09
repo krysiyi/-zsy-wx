@@ -1,0 +1,82 @@
+<!--pages/cart/cart.wxml-->
+<view class='cart'>
+<view wx:if="{{cart.length==0}}" class='empty'>
+<image src='https://s.yytcdn.com/v2/images/h5/cart_empty.png'></image>
+<view>购物车还是空的，赶紧去逛逛吧</view>
+<view class='gotomall' catchtap='gotoMall'>逛一逛</view>
+</view>
+<view wx:else class='cartwrapper'>
+<view class='header'>
+<text catchtap='changeEdit'>{{isEdit?'完成':'编辑'}}</text>
+</view>
+<view class='cart-list'>
+  <view class='cart-item' wx:for="{{cart}}" wx:key="{{item.id}}">
+    <view 
+    class="weui-cell__hd weui-check__hd_in-checkbox" 
+    bindtap='changeChecked'
+    id='{{item.id}}'
+    >
+      <icon 
+        class="weui-icon-checkbox_circle" 
+        type="circle" 
+        size="23" 
+        wx:if="{{!item.isChecked}}"
+      ></icon>
+      <icon 
+        class="weui-icon-checkbox_success" 
+        type="success" 
+        size="23"
+        color='#ff4683' 
+        wx:if="{{item.isChecked}}"
+      ></icon>
+    </view>
+    <view class='img'>
+      <image src='{{item.img}}'></image>
+    </view>
+    <view class='desc'>
+      <view class='title' wx:if="{{!isEdit}}">{{item.title}}</view>
+      <view class='title' wx:if="{{isEdit}}">
+        <view class='cacl'>
+        <view catchtap='reduceCount' data-id='{{item.id}}'></view>
+        <view>{{item.count}}</view>
+        <view catchtap='addCount' data-id='{{item.id}}'></view>
+        </view>
+      </view>
+      <view class='price'>￥{{item.price}}<text>x{{item.count}}</text></view>
+    </view>
+  </view>
+</view>
+<view class='footer'>
+  <view 
+    class="weui-cell__hd weui-check__hd_in-checkbox" 
+    bindtap='toggleAllCartStatus'
+    >
+      <icon 
+        class="weui-icon-checkbox_circle" 
+        type="circle" 
+        size="23" 
+        wx:if="{{!isAllChecked}}"
+      ></icon>
+      <icon 
+        class="weui-icon-checkbox_success" 
+        type="success" 
+        size="23" 
+        color='#ff4683' 
+        wx:if="{{isAllChecked}}"
+      ></icon>
+      全选
+  </view>
+  <view class='amount'>
+    <text  wx:if="{{!isEdit}}">合计：<text>￥{{amount}}</text></text>
+    <text wx:if="{{!isEdit}}" class='freight'>不含运费</text>
+  </view>
+  <view class='todo'  wx:if="{{!isEdit}}">
+  结算({{count}})
+  </view>
+  <view class='delete'  wx:if="{{isEdit}}" catchtap='deleteCart'>
+  删除
+  </view>
+</view>
+</view>
+
+</view>

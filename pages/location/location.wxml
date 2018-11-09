@@ -1,0 +1,22 @@
+<!--pages/location/location.wxml-->
+<map 
+  id='myLocation' 
+  class='map'
+  longitude="{{markers[0].longitude}}"
+  latitude="{{markers[0].latitude}}"
+  scale="15"
+  markers="{{markers}}"
+  show-location>
+</map>
+<button catchtap='updatelocation'>定位鸭</button>
+<view><text>您的位置:</text>{{address}}</view>
+<button catchtap='addAddress'>将此定位添加到新地址</button>
+<view>填入新地址</view>
+<input type='text' bindinput='currentVal' value='{{currentVal}}'></input><button bindtap='inputAddress'>添加新地址</button>
+<view class='addressList'>
+<text>收货地址</text>
+<view class='item' wx:for="{{addressList}}" wx:key="{{index}}">
+<text>{{item}}</text>
+<icon type='clear' size='20' catchtap='deleteAddress' data-index="{{index}}"></icon>
+</view>
+</view>
